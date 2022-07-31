@@ -3,6 +3,7 @@ import re
 import matplotlib.pyplot as plt
 from copy import deepcopy
 from mpl_toolkits.mplot3d import Axes3D
+
 #記録
 Wlog1,Wlog2,Wlog3,Wlog4,Wlog5 = [],[],[],[],[]
 D1,D2,D3,D4,D5 = [],[],[],[],[]
