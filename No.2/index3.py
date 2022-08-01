@@ -3,12 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 初期値
-N = np.random.rand(1500, 3)
+N = np.random.rand(100, 3)
 W = np.random.rand(4, 4, 3)
 alpha = 0.05
 
 i = 1
-Colors = ['red', 'blue', 'green', 'pink']
 while True:
 
     if i % 3 == 0:
@@ -19,7 +18,7 @@ while True:
                 X.append(float(l[0]))
                 Y.append(float(l[1]))
         # plt.title("{}".format(i))
-        # plt.scatter(X, Y, color = Colors[i//3 - 1])
+        # plt.scatter(X, Y)
         # plt.show()
     
     for (j, n) in enumerate(N):
@@ -35,7 +34,7 @@ while True:
                     if a == 0 and b == 0:
                         continue
                     else:
-                        W[mini+a, minj+b] = (1 - alpha/2) * W[mini, minj] + alpha/2 * n
+                        W[mini+a, minj+b] = (1 - alpha/2) * W[mini+a, minj+b] + alpha/2 * n
                 except:
                     pass
 
