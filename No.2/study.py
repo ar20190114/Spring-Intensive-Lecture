@@ -40,7 +40,7 @@ with open('20220625.txt', 'r') as f:
 w = np.array([[1.,1.]])
 beta = 0.1
 copy_eps = np.array([0.01,0.01])
-w_eps, D_eps, alpha = 0.05, 0.3, 0.05
+w_eps, D_eps, alpha = 0.1, 0.5, 0.05
 wlen = []
 log(0,w[0],0.)
 
@@ -86,29 +86,31 @@ for i in range(len(Wlog1)):
     w2.append(Wlog1[i][1])
 ax.plot(w1,w2,np.arange(len(Wlog1)),color='b',label='cell1')
 
+print(len(Wlog1))
+
 w1, w2 = [], []
 for i in range(len(Wlog2)):
     w1.append(Wlog2[i][0])
     w2.append(Wlog2[i][1])
-ax.plot(w1,w2,np.arange(wlen[0],wlen[0]+len(Wlog2)),color='g',label='cell2')
+ax.plot(w1,w2,np.arange(len(Wlog2)),color='g',label='cell2')
 
 w1, w2 = [], []
 for i in range(len(Wlog3)):
     w1.append(Wlog3[i][0])
     w2.append(Wlog3[i][1])
-ax.plot(w1,w2,np.arange(wlen[1],wlen[1]+len(Wlog3)),color='r',label='cell3')
+ax.plot(w1,w2,np.arange(len(Wlog3)),color='r',label='cell3')
 
 w1, w2 = [], []
 for i in range(len(Wlog4)):
     w1.append(Wlog4[i][0])
     w2.append(Wlog4[i][1])
-ax.plot(w1,w2,np.arange(wlen[2],wlen[2]+len(Wlog4)),color='y',label='cell4')
+ax.plot(w1,w2,np.arange(len(Wlog4)),color='y',label='cell4')
 
 w1, w2 = [], []
 for i in range(len(Wlog5)):
     w1.append(Wlog5[i][0])
     w2.append(Wlog5[i][1])
-ax.plot(w1,w2,np.arange(wlen[3],wlen[3]+len(Wlog5)),color='c',label='cell5')
+ax.plot(w1,w2,np.arange(len(Wlog5)),color='c',label='cell5')
 
 ax.view_init(elev=20, azim=40)
 x1, x2, w1, w2 = [], [], [], []
